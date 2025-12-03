@@ -1,5 +1,5 @@
 
-import React from "react";
+import React, { JSX } from "react";
 import { Frame } from "../components/Frame";
 import { Rodap } from "../components/Rodap";
 

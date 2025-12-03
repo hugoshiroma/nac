@@ -32,7 +32,7 @@ const LoginPage = (): JSX.Element => {
                 type="email"
                 id="email"
                 placeholder="Digite seu email aqui"
-                className="flex-grow p-3 rounded-md bg-claro/10 border border-claro/20 focus:outline-none focus:ring-2 focus:ring-azul-principal"
+                className="flex-grow p-3 rounded-md bg-claro/10 border border-claro/20 focus:outline-none focus:ring-2 focus:ring-azul-principal text-escuro"
               />
             </div>
             
@@ -44,7 +44,7 @@ const LoginPage = (): JSX.Element => {
                 type="password"
                 id="password"
                 placeholder="*********"
-                className="flex-grow p-3 rounded-md bg-claro/10 border border-claro/20 focus:outline-none focus:ring-2 focus:ring-azul-principal"
+                className="flex-grow p-3 rounded-md bg-claro/10 border border-claro/20 focus:outline-none focus:ring-2 focus:ring-azul-principal text-escuro"
               />
             </div>
             
