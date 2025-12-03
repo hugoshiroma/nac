@@ -15,9 +15,9 @@ export const Frame = ({
 
   const navLinks = [
     { href: "/blog", label: "Blog" },
-    { href: "#", label: "Cursos" },
-    { href: "#", label: "Laboratório" },
-    { href: "#", label: "Contato" },
+    { href: "/cursos", label: "Cursos" },
+    { href: "/laboratorios", label: "Laboratório" },
+    { href: "/contato", label: "Contato" },
   ];
 
   return (
