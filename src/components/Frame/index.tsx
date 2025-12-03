@@ -47,7 +47,7 @@ export const Frame = ({
 
         {/* Right Side: Auth buttons (Desktop) */}
         <div className="hidden md:flex items-center gap-4 md:gap-8">
-          <a href="#" className="font-h5-poppins text-claro hover:text-azul-principal transition-colors">
+          <a href="/login" className="font-h5-poppins text-claro hover:text-azul-principal transition-colors">
             Login
           </a>
           <a href="/quem-somos" className="px-4 py-2 bg-azul-principal text-claro font-h5-poppins rounded-lg hover:bg-opacity-80 transition-colors">
@@ -96,7 +96,7 @@ export const Frame = ({
               </a>
             ))}
             <hr className="border-claro/20" />
-            <a href="#" className="font-h3-POPPINS text-claro hover:text-azul-principal transition-colors" onClick={() => setIsMenuOpen(false)}>
+            <a href="/login" className="font-h3-POPPINS text-claro hover:text-azul-principal transition-colors" onClick={() => setIsMenuOpen(false)}>
               Login
             </a>
             <a href="/quem-somos" className="font-h3-POPPINS text-claro hover:text-azul-principal transition-colors" onClick={() => setIsMenuOpen(false)}>
