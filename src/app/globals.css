@@ -1,15 +1,75 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
+  /* Default Next.js variables */
   --background: #ffffff;
   --foreground: #171717;
-}
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Anima Variables */
+  --azul-principal: rgba(61, 173, 255, 1);
+  --azul-secundario: rgba(8, 44, 64, 1);
+  --button-2-font-family: "Poppins", Helvetica;
+  --button-2-font-size: 26px;
+  --button-2-font-style: normal;
+  --button-2-font-weight: 700;
+  --button-2-letter-spacing: 0px;
+  --button-2-line-height: normal;
+  --button-font-family: "Poppins", Helvetica;
+  --button-font-size: 16px;
+  --button-font-style: normal;
+  --button-font-weight: 700;
+  --button-letter-spacing: 0px;
+  --button-line-height: normal;
+  --claro: rgba(217, 217, 217, 1);
+  --claro-preencher: rgba(104, 104, 104, 1);
+  --escuro: rgba(9, 8, 8, 1);
+  --escuro-bg: rgba(25, 24, 23, 1);
+  --h2-POPPINS-font-family: "Poppins", Helvetica;
+  --h2-POPPINS-font-size: 41px;
+  --h2-POPPINS-font-style: normal;
+  --h2-POPPINS-font-weight: 700;
+  --h2-POPPINS-letter-spacing: 0px;
+  --h2-POPPINS-line-height: normal;
+  --h3-POPPINS-font-family: "Poppins", Helvetica;
+  --h3-POPPINS-font-size: 36px;
+  --h3-POPPINS-font-style: normal;
+  --h3-POPPINS-font-weight: 700;
+  --h3-POPPINS-letter-spacing: 0px;
+  --h3-POPPINS-line-height: normal;
+  --h4-POPPINS-font-family: "Poppins", Helvetica;
+  --h4-POPPINS-font-size: 28px;
+  --h4-POPPINS-font-style: normal;
+  --h4-POPPINS-font-weight: 500;
+  --h4-POPPINS-letter-spacing: 0px;
+  --h4-POPPINS-line-height: normal;
+  --h5-poppins-font-family: "Poppins", Helvetica;
+  --h5-poppins-font-size: 20px;
+  --h5-poppins-font-style: normal;
+  --h5-poppins-font-weight: 500;
+  --h5-poppins-letter-spacing: 0px;
+  --h5-poppins-line-height: normal;
+  --h6-poppins-font-family: "Poppins", Helvetica;
+  --h6-poppins-font-size: 18px;
+  --h6-poppins-font-style: normal;
+  --h6-poppins-font-weight: 300;
+  --h6-poppins-letter-spacing: 0px;
+  --h6-poppins-line-height: normal;
+  --subtom-bg: rgba(196, 196, 196, 1);
+  --text-courant-poppins-font-family: "Poppins", Helvetica;
+  --text-courant-poppins-font-size: 16px;
+  --text-courant-poppins-font-style: normal;
+  --text-courant-poppins-font-weight: 200;
+  --text-courant-poppins-letter-spacing: 0px;
+  --text-courant-poppins-line-height: normal;
+  --titulo-poppins-h1-font-family: "Poppins", Helvetica;
+  --titulo-poppins-h1-font-size: 51px;
+  --titulo-poppins-h1-font-style: normal;
+  --titulo-poppins-h1-font-weight: 900;
+  --titulo-poppins-h1-letter-spacing: 0px;
+  --titulo-poppins-h1-line-height: normal;
+  --animate-spin: spin 1s linear infinite;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,4 +83,114 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Anima Styles */
+@layer components {
+  .all-\[unset\] {
+    all: unset;
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 1s var(--animation-delay, 0s) ease forwards;
+}
+
+.animate-fade-up {
+  animation: fade-up 1s var(--animation-delay, 0s) ease forwards;
+}
+
+.animate-marquee {
+  animation: marquee var(--duration) infinite linear;
+}
+
+.animate-marquee-vertical {
+  animation: marquee-vertical var(--duration) linear infinite;
+}
+
+.animate-shimmer {
+  animation: shimmer 8s infinite;
+}
+
+.animate-spin {
+  animation: var(--animate-spin);
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes image-glow {
+  0% {
+    opacity: 0;
+    animation-timing-function: cubic-bezier(0.74, 0.25, 0.76, 1);
+  }
+
+  10% {
+    opacity: 0.7;
+    animation-timing-function: cubic-bezier(0.12, 0.01, 0.08, 0.99);
+  }
+
+  to {
+    opacity: 0.4;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes shimmer {
+  0%,
+  90%,
+  to {
+    background-position: calc(-100% - var(--shimmer-width)) 0;
+  }
+
+  30%,
+  60% {
+    background-position: calc(100% + var(--shimmer-width)) 0;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate(0);
+  }
+
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+@keyframes marquee-vertical {
+  0% {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(calc(-100% - var(--gap)));
+  }
 }
