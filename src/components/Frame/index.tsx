@@ -50,7 +50,7 @@ export const Frame = ({
           <a href="#" className="font-h5-poppins text-claro hover:text-azul-principal transition-colors">
             Login
           </a>
-          <a href="#" className="px-4 py-2 bg-azul-principal text-claro font-h5-poppins rounded-lg hover:bg-opacity-80 transition-colors">
+          <a href="/quem-somos" className="px-4 py-2 bg-azul-principal text-claro font-h5-poppins rounded-lg hover:bg-opacity-80 transition-colors">
             Quem nós somos?
           </a>
         </div>
@@ -99,7 +99,7 @@ export const Frame = ({
             <a href="#" className="font-h3-POPPINS text-claro hover:text-azul-principal transition-colors" onClick={() => setIsMenuOpen(false)}>
               Login
             </a>
-            <a href="#" className="font-h3-POPPINS text-claro hover:text-azul-principal transition-colors" onClick={() => setIsMenuOpen(false)}>
+            <a href="/quem-somos" className="font-h3-POPPINS text-claro hover:text-azul-principal transition-colors" onClick={() => setIsMenuOpen(false)}>
               Quem nós somos?
             </a>
           </nav>

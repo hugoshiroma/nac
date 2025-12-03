@@ -18,13 +18,14 @@ const BlogPage = (): JSX.Element => {
               <b>BLOG</b>
             </h1>
             
-          <div className="w-full md:w-1/2">
-            <img
-              className="w-full h-auto object-cover rounded-lg"
-              alt="AI Technology"
-              src="https://c.animaapp.com/0emaYJes/img/image-1@2x.png"
-            />
-          </div>
+            {/* Image Column (Mobile Only) */}
+            <div className="w-full md:hidden">
+              <img
+                className="w-full h-auto object-cover rounded-lg"
+                alt="AI Technology"
+                src="https://c.animaapp.com/0emaYJes/img/image-1@2x.png"
+              />
+            </div>
 
             <div className="flex flex-col gap-6">
               <h2 className="font-h3-POPPINS text-claro text-3xl md:text-4xl font-bold">
@@ -50,6 +51,15 @@ const BlogPage = (): JSX.Element => {
                 </a>
               </div>
             </div>
+          </div>
+          
+          {/* Right Column: Image (Desktop Only) */}
+          <div className="w-full md:w-1/2 hidden md:block">
+            <img
+              className="w-full h-auto object-cover rounded-lg"
+              alt="AI Technology"
+              src="https://c.animaapp.com/0emaYJes/img/image-1@2x.png"
+            />
           </div>
         </div>
       </main>
