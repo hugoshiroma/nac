@@ -1,10 +1,11 @@
 import React from "react";
 import { Frame } from "../../components/Frame";
+import { Rodap } from "../../components/Rodap";
 import { SocialIcons } from "../../components/SocialIcons";
 
 const Home = () => {
   return (
-    <div className="bg-escuro w-full min-h-screen flex flex-col items-center text-claro font-h5-poppins relative">
+    <div className="bg-escuro w-full flex flex-col items-center text-claro font-h5-poppins relative min-h-screen">
       {/* Background Image Layer */}
       <div className="absolute top-0 left-0 w-full h-full z-0">
         <img
@@ -15,16 +16,15 @@ const Home = () => {
       </div>
 
       {/* Header - Stays at the top */}
-      <header className="w-full z-20">
-        {/* The Frame component was refactored to be a responsive header/nav */}
+      <header className="w-full z-20 sticky top-0">
         <Frame />
       </header>
 
-      {/* Main Content Wrapper */}
-      <main className="w-full flex flex-col items-center z-10">
-        {/* Hero Section - Apply mt-[20vh] here */}
-        <section className="flex h-screen items-center justify-center w-full max-w-6xl px-4 md:px-8 lg:px-12">
-          <div className="mt-[-30vh] w-full min-h-[289px] flex flex-col justify-center items-center text-center p-8 bg-[#ffffff24] rounded-[48px] border border-solid border-[#ffffff1f] backdrop-blur-md">
+      {/* Main Content Wrapper - flex-grow pushes footer down */}
+      <main className="w-full flex flex-col items-center z-10 flex-grow">
+        {/* Hero Section */}
+        <section className="w-full h-[90vh] max-w-6xl px-4 md:px-8 lg:px-12 mt-24">
+          <div className="w-full min-h-[289px] flex flex-col justify-center items-center text-center p-8 bg-[#ffffff24] rounded-[48px] border border-solid border-[#ffffff1f] backdrop-blur-md">
             <h1 className="font-titulo-poppins-h1 text-3xl md:text-5xl">
               Mais do que uma simples plataforma
             </h1>
@@ -35,7 +35,7 @@ const Home = () => {
         </section>
 
         {/* Areas Section */}
-        <section className="md:mt-100 mt-56 w-full max-w-6xl px-4 md:px-8 lg:px-12 flex flex-col items-center">
+        <section className="mt-32 md:mt-0 w-full max-w-6xl px-4 md:px-8 lg:px-12 flex flex-col items-center">
           <h3 className="font-h3-POPPINS text-2xl md:text-3xl text-azul-secundario"><b>Áreas</b></h3>
           <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 w-full">
             {/* Cursos Card */}
@@ -63,7 +63,7 @@ const Home = () => {
         </section>
 
         {/* Tends do Mercado Section */}
-        <section className="mt-48 md:mt-20 w-full max-w-5xl px-4 md:px-8 lg:px-12 flex flex-col items-center text-center">
+        <section className="my-32 w-full max-w-5xl px-4 md:px-8 lg:px-12 flex flex-col items-center text-center">
           <h3 className="font-h3-POPPINS text-3xl text-azul-secundario">
             <b>Tends do Mercado</b>
           </h3>
@@ -79,13 +79,9 @@ const Home = () => {
       </main>
 
       {/* Footer */}
-      <footer className="w-full flex flex-col items-center z-10 mt-48 md:mt-64 mb-20">
-        <div className="flex items-center gap-6">
-          <SocialIcons platform="instagram" />
-          <SocialIcons platform="x-twitter" />
-          <SocialIcons platform="linked-in" />
-        </div>
-      </footer>
+      <div className="w-full z-10">
+        <Rodap />
+      </div>
     </div>
   );
 };
