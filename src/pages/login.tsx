@@ -7,7 +7,7 @@ const LoginPage = (): JSX.Element => {
   return (
     <div className="bg-[#181816] w-full min-h-screen flex flex-col">
       {/* Custom Header with only Logo */}
-      <header className="w-full h-24 flex items-center px-4 md:px-8 lg:px-12 bg-azul-secundario z-20 sticky top-0">
+      <header className="w-full h-24 flex items-center px-4 md:px-8 lg:px-12 z-20 sticky top-0">
         <Link href="/" className="w-14 h-14">
           <img
             className="w-full h-full object-contain"
