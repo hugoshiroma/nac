@@ -1,45 +1,37 @@
 import React from "react";
-import { Frame } from "../../components/Frame";
-import { Rodap } from "../../components/Rodap";
-import { SocialIcons } from "../../components/SocialIcons";
+import { Frame } from "../components/Frame";
+import { Rodap } from "../components/Rodap";
 
 const Home = () => {
   return (
-    <div className="bg-escuro w-full flex flex-col items-center text-claro font-h5-poppins relative min-h-screen">
-      {/* Background Image Layer */}
-      <div className="absolute top-0 left-0 w-full h-full z-0">
-        <img
-          className="w-full h-full object-cover"
-          alt="Background"
-          src="https://c.animaapp.com/p5Mjlt9W/img/background.png"
-        />
-      </div>
+    <div className="w-full flex flex-col items-center text-claro font-h5-poppins relative min-h-screen">
+      {/* Removed the absolute full-page background div */}
 
       {/* Header - Stays at the top */}
       <header className="w-full z-20 sticky top-0">
         <Frame />
       </header>
 
-      {/* Main Content Wrapper - flex-grow pushes footer down */}
-      <main className="w-full flex flex-col items-center z-10 flex-grow">
-        {/* Hero Section */}
-        <section className="w-full h-[90vh] max-w-6xl px-4 md:px-8 lg:px-12 mt-24">
-          <div className="w-full min-h-[289px] flex flex-col justify-center items-center text-center p-8 bg-[#ffffff24] rounded-[48px] border border-solid border-[#ffffff1f] backdrop-blur-md">
+      {/* Main Content Wrapper */}
+      <main className="bg-claro w-full flex flex-col items-center z-10">
+        {/* Hero Section - Now has its own background */}
+        <section className="w-full h-[90vh] px-4 md:px-8 lg:px-12 pt-48 bg-cover bg-center" style={{ backgroundImage: "url('/bg 2.png')" }}>
+          <div className="w-full min-h-[289px] max-w-6xl mx-auto flex flex-col justify-center items-center text-center p-8 bg-[#ffffff24] rounded-[48px] border border-solid border-[#ffffff1f] backdrop-blur-md">
             <h1 className="font-titulo-poppins-h1 text-3xl md:text-5xl">
-              Mais do que uma simples plataforma
+              <b>Mais do que uma simples plataforma</b>
             </h1>
             <h2 className="font-h3-POPPINS text-xl md:text-3xl mt-4">
-              Networking. Aprendizado. Crescimento.
+              <b>Networking. Aprendizado. Crescimento.</b>
             </h2>
           </div>
         </section>
 
         {/* Areas Section */}
-        <section className="mt-32 md:mt-0 w-full max-w-6xl px-4 md:px-8 lg:px-12 flex flex-col items-center">
+        <section className="bg-claro py-32 w-full max-w-6xl px-4 md:px-8 lg:px-12 flex flex-col items-center">
           <h3 className="font-h3-POPPINS text-2xl md:text-3xl text-azul-secundario"><b>Áreas</b></h3>
           <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 w-full">
             {/* Cursos Card */}
-            <div className="p-8 backdrop-blur-md backdrop-brightness-100 [-webkit-backdrop-filter:blur(6.3px)_brightness(100%)] bg-[#090808]/50 rounded-2xl flex flex-col items-center text-center">
+            <div className="p-8 bg-[#090808]/100 rounded-2xl flex flex-col items-center text-center">
               <h4 className="font-h2-POPPINS text-3xl text-azul-principal"><b>Cursos</b></h4>
               <p className="mt-6 text-base max-w-sm">
                 Esta seção documenta minha jornada de aprendizado contínuo. Aqui, apresento as certificações, workshops e cursos.
@@ -50,7 +42,7 @@ const Home = () => {
             </div>
 
             {/* Laboratório Card */}
-            <div className="p-8 backdrop-blur-md backdrop-brightness-100 [-webkit-backdrop-filter:blur(6.3px)_brightness(100%)] bg-[#090808]/50 rounded-2xl flex flex-col items-center text-center">
+            <div className="p-8 bg-[#090808]/100 rounded-2xl flex flex-col items-center text-center">
               <h4 className="font-h2-POPPINS text-3xl text-azul-principal"><b>Laboratório</b></h4>
               <p className="mt-6 text-base max-w-sm">
                 Aqui é onde o designer prova seu valor além da estética. Ela não mostra apenas o resultado final, mas como o problema foi resolvido.
@@ -63,7 +55,7 @@ const Home = () => {
         </section>
 
         {/* Tends do Mercado Section */}
-        <section className="my-32 w-full max-w-5xl px-4 md:px-8 lg:px-12 flex flex-col items-center text-center">
+        <section className="bg-claro pb-32 w-full max-w-5xl px-4 md:px-8 lg:px-12 flex flex-col items-center text-center">
           <h3 className="font-h3-POPPINS text-3xl text-azul-secundario">
             <b>Tends do Mercado</b>
           </h3>
@@ -78,8 +70,8 @@ const Home = () => {
         </section>
       </main>
 
-      {/* Footer */}
-      <div className="w-full z-10">
+      {/* Footer - Now has its own background */}
+      <div className="w-full z-10 mt-auto">
         <Rodap />
       </div>
     </div>
@@ -87,4 +79,3 @@ const Home = () => {
 };
 
 export default Home;
-
